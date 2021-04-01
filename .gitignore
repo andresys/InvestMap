@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -21,13 +22,23 @@
 
 /public/assets
 .byebug_history
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
+/public/system
 /public/packs
 /public/packs-test
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+*.rbc
+capybara-*.html
+.rspec
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+.rvmrc
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+.powenv
