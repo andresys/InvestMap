@@ -2,11 +2,18 @@
   "name": "invest-map",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@mdi/font": "^5.9.55",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
+    "leaflet": "^1.7.1",
+    "material-design-icons-iconfont": "^6.1.0",
+    "mdi": "^2.2.43",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "vue2-leaflet": "^2.7.0",
+    "vuetify": "^2.4.9"
   },
   "version": "0.1.0",
   "devDependencies": {
