@@ -1,0 +1,103 @@
+.leaflet-container {
+  /*position: fixed;*/
+  z-index: 1;
+}
+
+.leaflet-right .leaflet-control {
+  clear: right;
+}
+
+.leaflet-left .leaflet-control {
+  clear: left;
+}
+
+.leaflet-bottom {
+  bottom: 10px !important;
+}
+
+.leaflet-left .leaflet-control  {
+  margin-left: 10px !important;
+}
+
+.leaflet-right .leaflet-control {
+  margin-right: 10px !important;
+}
+
+.leaflet-top .leaflet-control  {
+  margin-top: 10px !important;
+}
+
+.leaflet-bottom .leaflet-control {
+  margin-bottom: 10px !important;
+}
+
+@media screen and (max-height: 300px) {
+  .leaflet-bottom {
+    display: none;
+  }
+}
+
+.leaflet-control-container {
+  height: 100%;
+  position: relative;
+}
+
+.leaflet-control-container, .leaflet-left, .leaflet-right {
+  transition-duration: 250ms;
+  transition-property: margin-left, margin-right;
+}
+
+.leaflet-control-container>div.leaflet-top.leaflet-right,
+.leaflet-control-container>div.leaflet-bottom.leaflet-right {
+  left: 0;
+}
+
+.leaflet-control-container>div.leaflet-top.leaflet-left,
+.leaflet-control-container>div.leaflet-bottom.leaflet-left {
+  right: 0;
+}
+
+.leaflet-control-smartbar {
+  width: 500px;
+  margin: 10px 0 0;
+  padding: 0 10px;
+  max-width: 100%;
+  float: left !important;
+}
+
+.leaflet-control-sidebar {
+  cursor: default;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  z-index: 2000;
+  transition-duration: 250ms;
+  transition-property: transform;
+}
+
+.leaflet-control-sidebar.leaflet-left {
+  transform: translateX(-100%);
+}
+
+.leaflet-control-sidebar.leaflet-right {
+  transform: translateX(100%);
+}
+
+.leaflet-control-sidebar.open {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 500px) {
+  .leaflet-control-sidebar {
+    width: 100% !important;
+  }
+}
+/* 
+@media screen and (min-width: 500px) {
+  header button {
+    display: none !important;
+  }
+  header button+div {
+    padding-left: 0 !important;
+  }
+} */

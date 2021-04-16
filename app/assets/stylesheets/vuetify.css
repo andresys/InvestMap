@@ -1,0 +1,14 @@
+.v-application, .v-application--wrap {
+  min-height: 100% !important;
+}
+
+.v-list-item--active {
+  color: white !important;
+}
+
+.v-input--switch {
+  position: absolute;
+  margin: 0 !important;
+  padding: 0 !important;
+  right: 10px;
+}

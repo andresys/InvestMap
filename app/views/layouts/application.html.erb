@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>InvestMap</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Инвестиционная карта города Твери</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
-
   <body>
     <%= yield %>
     <noscript>
-      <strong>We're sorry but InvestMap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>Извените, InvestMap не работает без включенной поддержки JavaScript. Пожалуйста включите и продожите.</strong>
     </noscript>
   </body>
 </html>

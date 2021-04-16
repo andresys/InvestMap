@@ -8,16 +8,16 @@
 // Rails.start()
 import Vue from 'vue'
 import vuetify from '../plugins/vuetify'
-import leaflet from '../plugins/leaflet'
-// import store from '../store'
-// import router from '../router'
+import geolocation from '../plugins/geolocation'
+import store from '../store'
+import router from '../router'
 import App from '../app.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     vuetify: vuetify,
-    // store: store,
-    // router: router,
+    store: store,
+    router: router,
     render: h => h(App)
   }).$mount()
   document.body.appendChild(app.$el)
