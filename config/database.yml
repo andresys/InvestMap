@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: invest
   password: pPWpDNJTLDPlHXY4
-  host: 10.10.2.2
+  host: 10.10.3.3
 
 development:
   <<: *default

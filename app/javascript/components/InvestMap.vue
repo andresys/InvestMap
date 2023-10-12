@@ -1,6 +1,7 @@
 <template>
 <l-map :zoom="startPosition.zoom" :center="startPosition.center" :options="{zoomControl: false, attributionControl: false}" ref="map" @ready="initMap">
   <l-tile-layer :url="url"></l-tile-layer>
+  <l-tile-layer :url="webcamurl"></l-tile-layer>
 
   <!--l-control-zoom position="bottomright"></!--l-control-zoom-->
 
@@ -110,6 +111,7 @@ export default {
     return {
       map: null,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      webcamurl: 'http://10.10.2.10/genplan/{z}/{x}/{y}.png?layer=webcam',
       sidebar: false,
       layerOptions: {
         accessToken: 'pk.eyJ1IjoiYW5kcmVzeXMiLCJhIjoiY2tiOTBseGQwMDlsNjJxbzhuY3V5YnVzZyJ9.GFa5a-XvBpHzJJauRAMfpw',

@@ -25,7 +25,7 @@
         </v-btn>
       </v-list-item>
 
-      <ProfileCard></ProfileCard>
+      <ProfileCard :profile="currentUser" @logout="logout"></ProfileCard>
 
       <v-list dense expand>
         <v-subheader>Объекты для инвестирования</v-subheader>
@@ -115,6 +115,7 @@
 <script>
 import InvestMap from 'components/InvestMap'
 import ProfileCard from 'components/ProfileCard'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -129,5 +130,26 @@ export default {
       users: true,
     },
   }),
+  computed: {
+    ...mapState('accountModule', {
+      currentUser: state => state.token,
+      // error: state => state.error && state.error.error,
+    }),
+  },
+  methods: {
+    ...mapActions('accountModule', {
+      // getCurrentAccount: 'ACCOUNT',
+      logout: 'LOGOUT',
+    }),
+  },
+  mounted: function () {
+    // this.getCurrentAccount()
+      // .then(response => {
+      //   if(this.currentUser && !this.currentUser.profile)
+      //     this.$router.push({ name: 'Profile', hash: this.$route.hash })
+      // })
+      // .catch(error => {
+      // })
+  }
 }
 </script>
